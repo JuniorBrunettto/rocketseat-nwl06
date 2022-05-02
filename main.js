@@ -31,3 +31,46 @@ window.addEventListener("scroll" , function(){
     }
 })
 
+/* testimonials slider swiper 
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1
+    pagination: {
+        el: '.swiper-pagination',
+      },
+    mausewheel: true,
+    keyboard: true,
+    
+  });
+*/
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+
+    mausewheel: true,
+    keyboard: true
+
+  
+       
+  })
+
+  /*  ScrollReveal mostrar elementos quando der review na tela */
+const ScrollReveal = ScrollReveal ({
+    origin: "top",
+    distance: "30px",
+    duration: 700,
+    reset: true
+});
+
+ScrollReveal.reveal(`
+#home .image, #home .text,
+#about .image, #about .text
+#services header, #services .card,
+#testimonials header, #testimonials .testimonials
+#contact .text, #contact .links
+ `, {interval: 100});
